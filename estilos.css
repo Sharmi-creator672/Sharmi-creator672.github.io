@@ -20,7 +20,8 @@ body {
     position: relative;
     background-size: contain;
     background-position: center;
-    min-height: 280px;
+    background-repeat: no-repeat;
+    min-height: 340px;
     display: flex;
     align-items: flex-end;
     padding: 0;
