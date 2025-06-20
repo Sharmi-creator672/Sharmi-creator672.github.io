@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharmelym Delgado Patiño</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="hero" style="background-image: url('https://i.imgur.com/WJ4DXbb.jpg');">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="logo"></div>
+            <h1>Sharmelym Delgado Patiño</h1>
+            <p class="slogan">Experiencia. Creatividad. Valor.</p>
+        </div>
+    </header>
+    <!-- Perfil -->
+    <section class="perfil">
+        <div class="perfil-img">
+            <img src="https://i.imgur.com/SBIBo2R.jpg" alt="Sharmelym Delgado Patiño">
+        </div>
+        <div class="perfil-info">
+            <h2>Sobre mí</h2>
+            <p>Yo soy Sharmelym Delgado Patiño, persona creativa con una personalidad alegre y colaborativa. Con experiencia en redes sociales, creación de contenido, ventas y también dominio en Adobe Premiere, Cap Cut, DaVinci, herramientas como Metricol y editor de Photoshop.</p>
+        </div>
+    </section>
+    <!-- Habilidades -->
+    <section class="habilidades">
+        <div class="habilidades-info">
+            <h2>Habilidades</h2>
+            <img src="https://i.imgur.com/SBIBo2R.jpg" alt="Persona creativa">
+        </div>
+        <ul class="habilidades-lista">
+            <li>Detallista</li>
+            <li>Buena comunicación</li>
+            <li>Creatividad</li>
+        </ul>
+    </section>
+    <!-- Clientes -->
+    <section class="clientes">
+        <h2>Clientes</h2>
+        <p>He trabajado con equipos de trabajo y empresas reconocidas.</p>
+        <div class="clientes-lista">
+            <div class="cliente-card">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80" alt="Belden Banco Ltd.">
+                <span>Belden Banco Ltd.</span>
+            </div>
+            <div class="cliente-card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Digital Miguel">
+                <span>Digital Miguel</span>
+            </div>
+            <div class="cliente-card">
+                <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80" alt="Valores Perle">
+                <span>Valores Perle</span>
+            </div>
+        </div>
+    </section>
+    <!-- Experiencia con carrusel -->
+    <section class="experiencia">
+        <blockquote>
+            "He presentado confianza con las personas que elaboré y ayudé a crear contenido para redes sociales como también en Branding y por supuesto en mis propias páginas iniciando un negocio por internet."
+        </blockquote>
+        <div class="carrusel">
+            <button class="carrusel-btn" id="prev">&#8592;</button>
+            <div class="carrusel-imagenes">
+                <img src="https://i.imgur.com/1qcCcNu.jpg" alt="Resultado experiencia" class="activo">
+                <!-- Si tienes más imágenes, duplica la línea anterior y cambia el enlace -->
+            </div>
+            <button class="carrusel-btn" id="next">&#8594;</button>
+        </div>
+    </section>
+    <!-- Contacto -->
+    <footer class="contacto">
+        <div class="contacto-content">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Mano extendida">
+            <div>
+                <h2>Contacta conmigo</h2>
+                <ul>
+                    <li><strong>Dirección</strong><br>Calle Barcelona, 1, 25001 Lérida</li>
+                    <li><strong>Teléfono</strong><br>923 456 789</li>
+                    <li><strong>Correo electrónico</strong><br>
+                        <a href="mailto:sharmelym@email.com">sharmelym@email.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- JS para carrusel -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const imagenes = document.querySelectorAll('.carrusel-imagenes img');
+        let indiceActual = 0;
+        const btnPrev = document.getElementById('prev');
+        const btnNext = document.getElementById('next');
+
+        function mostrarImagen(indice) {
+            imagenes.forEach((img, i) => {
+                img.classList.toggle('activo', i === indice);
+            });
+        }
+
+        btnPrev.onclick = () => {
+            indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+            mostrarImagen(indiceActual);
+        };
+        btnNext.onclick = () => {
+            indiceActual = (indiceActual + 1) % imagenes.length;
+            mostrarImagen(indiceActual);
+        };
+
+        // Avance automático cada 5 segundos
+        setInterval(() => {
+            indiceActual = (indiceActual + 1) % imagenes.length;
+            mostrarImagen(indiceActual);
+        }, 5000);
+    });
+    </script>
+</body>
+</html>
