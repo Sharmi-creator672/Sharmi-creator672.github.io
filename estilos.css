@@ -18,7 +18,7 @@ body {
 /* HERO */
 .hero {
     position: relative;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     min-height: 280px;
     display: flex;
@@ -130,7 +130,7 @@ body {
 .clientes-lista {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: center;
     margin-top: 22px;
 }
 .cliente-card {
