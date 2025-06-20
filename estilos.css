@@ -15,9 +15,9 @@
     white-space: normal;       
     display: block
 }
-.encabezamiento-content h1, .encabezamiento-content h2 {
-    font-size: 2.2em;
-    white-space: normal;
+.encabezamiento-content h1 {
+    font-size: 2.2em;       
+    margin: 0 0 0.5em 0;
 }
 body {
     margin: 0;
