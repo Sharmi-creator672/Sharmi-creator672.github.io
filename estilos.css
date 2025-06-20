@@ -7,7 +7,15 @@
     --color-cliente-bg: #f6f6f6;
     --color-cliente-text: #222;
 }
-
+.encabezamiento-content {
+    padding: 32px 24px 32px 24px;
+    max-width: 90vw;
+    word-break: break-word;
+}
+.encabezamiento-content h1, .encabezamiento-content h2 {
+    font-size: 2.2em; /* Ajusta según lo que necesites */
+    white-space: normal;
+}
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
