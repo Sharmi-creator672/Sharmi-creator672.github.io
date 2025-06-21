@@ -297,13 +297,320 @@ body {
         max-width: 350px;
         height: auto;
     }
-}@media (max-width: 600px) {
+/* --- ESTILOS GENERALES --- */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: #181818;
+  color: #fff;
+}
+
+header.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+}
+
+header .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 32px 24px;
+  box-sizing: border-box;
+}
+
+.encabezamiento-content {
+  text-align: left;
+  max-width: 90vw;
+  padding: 32px 24px 32px 24px;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.encabezamiento-content h1 {
+  font-size: 2.2em;
+  margin: 0 0 0.5em 0;
+  color: #fff;
+  text-shadow: 2px 2px 8px #0008;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 1.15em;
+  color: #ffd700;
+  text-shadow: 1px 1px 10px #000;
+}
+
+/* --- PERFIL --- */
+.perfil {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 32px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.perfil-img img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 2px 12px #0006;
+}
+
+.perfil-info h2 {
+  margin-top: 0;
+  color: #ffd700;
+}
+
+/* --- HABILIDADES --- */
+.habilidades {
+  padding: 32px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.habilidades-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.habilidades-info h2 {
+  color: #ffd700;
+}
+
+.habilidades-info img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.habilidades-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 16px 0 0 0;
+  list-style: none;
+}
+
+.habilidades-lista li {
+  background: #282828;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #ffd700;
+  font-weight: 500;
+}
+
+/* --- CLIENTES --- */
+.clientes {
+  padding: 32px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.clientes h2 {
+  color: #ffd700;
+}
+
+.clientes-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.cliente-card {
+  background: #282828;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  min-width: 120px;
+  flex: 1 1 120px;
+  max-width: 180px;
+}
+
+.cliente-card img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.cliente-card span {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+/* --- EXPERIENCIA Y CARRUSEL --- */
+.experiencia {
+  padding: 32px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experiencia blockquote {
+  font-style: italic;
+  background: #282828;
+  border-left: 4px solid #ffd700;
+  margin: 0 0 24px 0;
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.carrusel-btn {
+  background: #ffd700;
+  color: #181818;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.carrusel-imagenes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 210px;
+  height: 130px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carrusel-imagenes img {
+  display: none;
+  width: 210px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  position: absolute;
+  left: 0; top: 0;
+  transition: opacity 0.3s;
+}
+
+.carrusel-imagenes img.activo {
+  display: block;
+  position: relative;
+  opacity: 1;
+  z-index: 2;
+}
+
+/* --- CONTACTO --- */
+footer.contacto {
+  background: #222;
+  padding: 40px 24px;
+  margin-top: 32px;
+  color: #fff;
+}
+
+.contacto-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contacto-content img {
+  max-width: 140px;
+  min-width: 80px;
+  border-radius: 12px;
+  margin-right: 16px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px #0007;
+}
+
+.contacto-content > div {
+  flex: 1;
+}
+
+.contacto-content h2 {
+  margin-top: 0;
+  color: #ffd700;
+}
+
+.contacto-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacto-content li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.contacto-content a {
+  color: #ffd700;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+
+.contacto-content a:hover {
+  text-decoration: underline;
+  color: #ffea00;
+}
+
+/* --- RESPONSIVE: MÓVIL --- */
+@media (max-width: 900px) {
+  .perfil, .habilidades, .clientes, .experiencia, .contacto-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+  .perfil-img img, .contacto-content img {
+    margin: 0 auto 16px auto;
+    display: block;
+  }
+  .contacto-content > div, .perfil-info, .habilidades-lista {
+    text-align: center;
+  }
+  .clientes-lista {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content, .encabezamiento-content, .perfil, .habilidades, .clientes, .experiencia, .contacto-content {
+    padding: 18px 6vw !important;
+  }
   .encabezamiento-content h1 {
     font-size: 1.3em;
   }
-}
-@media (max-width: 600px) {
-  .encabezamiento-content h1 {
-    font-size: 1.3em;
+  .perfil-img img {
+    width: 90px;
+    height: 90px;
+  }
+  .contacto-content img {
+    max-width: 80vw;
+    min-width: 0;
   }
 }
